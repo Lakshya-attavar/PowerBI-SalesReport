@@ -1,0 +1,116 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 TimesNewRomanPS-BoldMT;\f1\froman\fcharset0 TimesNewRomanPSMT;\f2\fswiss\fcharset0 Helvetica;
+\f3\ftech\fcharset77 Symbol;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue254;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c99608;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid102\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww17480\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\li480\fi-480\qj\partightenfactor0
+
+\f0\b\fs32 \cf0 \expnd0\expndtw0\kerning0
+1.
+\f1\b0\fs18\fsmilli9333 \'a0\'a0\'a0\'a0 
+\f0\b\fs32 Data extraction
+\f1\b0 :
+\f2 \
+\pard\pardeftab720\sa320\qj\partightenfactor0
+
+\f1 \cf0 Data was extracted using importing methods in PowerBI for the Excel, CSV and text filetypes.\
+\pard\pardeftab720\li480\fi-480\qj\partightenfactor0
+
+\f0\b \cf0 2.
+\f1\b0\fs18\fsmilli9333 \'a0\'a0\'a0\'a0 
+\f0\b\fs32 Data Management:
+\f2\b0 \
+\pard\pardeftab720\sa320\qj\partightenfactor0
+
+\f1 \cf0 The loaded data tables are inspected for the existing and missing connections between them. Any missing connections are established by creating relationships between the tables by their common variables. The missing connection between Salespeople and customer tables is established using the sales ID column. Any missing connections post the transformations or addition of new tables are subsequently created.\
+\pard\pardeftab720\li480\fi-480\qj\partightenfactor0
+
+\f0\b \cf0 3.
+\f1\b0\fs18\fsmilli9333 \'a0\'a0\'a0\'a0 
+\f0\b\fs32 Data Transformation:
+\f2\b0 \
+\pard\pardeftab720\sa320\qj\partightenfactor0
+
+\f1 \cf0 To prepare the data for analysis, the following transformations are done. The data is first checked for missing values. The missing values in the PRODUCT_COLOUR column of the products table and CONTACT_EMAIL column of the Logistics table are replaced with null as the removal of these rows might result in loss of necessary information. Next, the variables are checked for appropriate data types. PRICE_PER_UNIT (Products), PRODUCT_PRICE (Transactions) and PRODUCT COST (Transactions) are converted from whole numbers to decimal type since prices can have decimal values.\
+\pard\pardeftab720\qj\partightenfactor0
+\cf0 For the creation of visualisations the following transformations are performed:\
+\
+
+\f0\b Transaction Table:
+\f1\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj\partightenfactor0
+\ls1\ilvl0
+\f3 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}
+\f1 \expnd0\expndtw0\kerning0
+To calculate the profits from each transaction, a custom column PRODUCT_PROFIT is created in the Transactions table by using the formula PRODUCT_PRICE-PRODUCT_COST. Its type is set to decimal.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj\partightenfactor0
+\ls1\ilvl0
+\f3 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}
+\f1 \expnd0\expndtw0\kerning0
+A new column \'93month\'94 is created in the Transactions table to extract the month from the transaction date. For the creation of visualisation to show the impact of sustainability commitment, a new column \'93pre-july\'94 is created using the DAX formula pre-july = IF(Transactions[month]<=6, \'93pre-july\'94, \'93post-july\'94).\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+A new column \'93continent\'94 is added to the transactions table, to differentiate shipment countries belonging to the UK and Europe.\
+\pard\pardeftab720\li480\fi-480\qj\partightenfactor0
+
+\f2 \cf0 \
+
+\f0\b Products Table
+\f1\b0 :\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 	\'95	\expnd0\expndtw0\kerning0
+A new column \'91Product_Line\'92 is added using a conditional column to categorise the products based on their type. It is derived from the PRODUCT_NAME column without the colour information of the product. \
+\pard\pardeftab720\li480\fi-480\qj\partightenfactor0
+
+\f2 \cf0 \
+
+\f0\b Product_Sales_details:
+\f2\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj\partightenfactor0
+\ls2\ilvl0
+\f1 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+To create a new table \'91Product_Sales_Details\'92 with complete details of a product, the Transactions table is duplicated. Only necessary columns (PRODUCT_ID, QUANTITY, PRODUCT_PRICE, PRODUCT_COST and PRODUCT_PROFIT) are retained. The data is grouped by PRODUCT_ID to ensure only one record for each product. A CATEGORY column is added based on the corresponding categories in the products table. The PRODUCT_SERIES column is added based on the corresponding Product_line column in the products table using a DAX formula. \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\qj\partightenfactor0
+\ls2\ilvl1\cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+PRODUCT_SERIES = Related(Products[Product_line])\
+\ls2\ilvl1\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8259 	}CATEGORY = Related(Products[PRODUCT_CATEGORY])\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj\partightenfactor0
+\ls2\ilvl0\cf0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+To identify the most profitable products, the profit margin is calculated. Since the products table has missing and negative values including some irregularities (very high value compared to other products in the same category), for PRICE_PER_UNIT and COST, the following columns are created in the Product_Sales_Details table created earlier:
+\f2 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\qj\partightenfactor0
+\ls2\ilvl1
+\f1\fs29\fsmilli14667 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+PER_UNIT_PRICE = PRODUCT_PRICE/QUANTITY
+\f2\fs32 \
+\ls2\ilvl1
+\f1\fs29\fsmilli14667 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+PER_UNIT_COST = PRODUCT_COST/QUANTITY
+\f2\fs32 \
+\ls2\ilvl1
+\f1\fs29\fsmilli14667 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+PER_UNIT_PROFIT = PRODUCT_PROFIT/QUANTITY
+\f2\fs32 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1
+\f1\fs29\fsmilli14667 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+PROFIT_MARGIN(%) = ([PRODUCT_PRICE- PRODUCT_COST]/PRODUCT_PRICE)* 100
+\fs32 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj\partightenfactor0
+\ls3\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+A new column \'93rank\'94 is created in Product_Sales_Details to rank top-selling products in each category based on quantity sold. This is calculated as
+\f2 \
+\ls3\ilvl0
+\f1 \cb3 \kerning1\expnd0\expndtw0 rank\expnd0\expndtw0\kerning0
+ = RANKX(FILTER('Product_Sales_Details',Product_Sales_Details[CATEGORY]=EARLIER(Product_Sales_Details[CATEGORY])), [QUANTITY],,DESC, Dense)
+\f2 \cb1 \
+\pard\pardeftab720\sa320\qj\partightenfactor0
+
+\f1 \cf0 \
+Thus, all the required transformations and management are performed to enable the creation of desired visualisations.\
+}
