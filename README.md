@@ -24,6 +24,7 @@ The company’s main database structure as seen below consists of four tables: P
 * Customers: The customer’s table has 8 columns with details of customers’ ID, name, address, year of the first order, business category, salesperson ID, email and if they are new customers.
 * Logistics: The logistics file(txt) includes details of logistic ID, name, type, office location, email and contact number separated by semicolon delimiter. 
 <img width="708" alt="Pasted Graphic 20" src="https://github.com/user-attachments/assets/7ccc91c2-f96a-42e0-9d0b-79fc8ad840a8">
+
 ## Executive Summary
 
 ### Overview of Findings
