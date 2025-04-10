@@ -21,10 +21,11 @@ https://github.com/Lakshya-attavar/PowerBI-SalesReport/blob/main/Salesman_Perfor
 
 ## Data Structure & Initial Checks
 
-The company’s main database structure as seen below consists of four tables: Products, Transactions, Customers and Logistics. A description of each table is as follows:
+The company’s main database structure as seen below consists of five tables: Products, Transactions, Customers, Salespeople and Logistics. A description of each table is as follows:
 * Products: The products table contains information on the ID, name, category, colour, price per unit and cost of the products sold by Universal Export.
 * Transactions: The Transactions table consists of 11 columns with details about the orders including their ID, date, total price, customer ID, logistic ID, shipment city, shipment country, products ordered, quantity, price and cost info
 * Customers: The customer’s table has 8 columns with details of customers’ ID, name, address, year of the first order, business category, salesperson ID, email and if they are new customers.
+* Salespeople: The Salespeople file(json) includes details of salesperson ID, nationality, education, gender and age. 
 * Logistics: The logistics file(txt) includes details of logistic ID, name, type, office location, email and contact number separated by semicolon delimiter. 
 <img width="764" alt="Image" src="https://github.com/user-attachments/assets/17a235d6-1f62-4e6e-9284-241642295928" />
 
