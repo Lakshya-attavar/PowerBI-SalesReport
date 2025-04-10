@@ -16,6 +16,9 @@ The data cleaning steps and DAX formula used to transform the data for this anal
 An interactive PowerBI report used to report and explore sales trends can be downloaded from here 
 https://github.com/Lakshya-attavar/PowerBI-SalesReport/blob/main/SalesReport-Manufacturing.pbix.
 
+A report on Sales peoples performance tailored for management decision making can be downloaded from here 
+https://github.com/Lakshya-attavar/PowerBI-SalesReport/blob/main/Salesman_Performance_Report.pdf
+
 ## Data Structure & Initial Checks
 
 The company’s main database structure as seen below consists of four tables: Products, Transactions, Customers and Logistics. A description of each table is as follows:
